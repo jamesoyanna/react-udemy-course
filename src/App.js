@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Validation from './Validation/Validation';
 import Char from './Char/Char';
 
+import './App.css';
+
 export default class App extends Component {
 
 state = {
@@ -29,8 +31,10 @@ state = {
        clicked={()=>this.deleteCharHandler(index)} />;
     })
 
+    let classes = ['red', 'bold'].join(' ');
     return (
       <div className="App">
+        <p className={classes}>You mus turn to red</p>
         <ol>
           <li>
             Create an input field (in App component) with a change listener
