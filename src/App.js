@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Validation from './Validation/Validation';
+import Char from './Char/Char';
+
 export default class App extends Component {
 
 state = {
