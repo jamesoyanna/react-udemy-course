@@ -9,8 +9,9 @@ const Char = (props)=>{
      textAlign: 'center'
     }
     return (
-        <div style = {style}>
+        <div style = {style} onClick={props.clicked} >
         {props.character}
+        
 
         </div>
     )
