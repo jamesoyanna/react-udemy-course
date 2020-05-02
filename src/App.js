@@ -61,11 +61,29 @@ class App extends Component {
         
         })};
       </div>
-    )
+    );
+  style.backgroundColor = 'red'
+  style[':hover'] = {
+    backgroundColor: 'blue',
+    color: 'black'
+  }
   }
 
-    return <div></div>;
+  const classes = [];
+  if(this.state.persons.length <=2){
+    classes.push('bold');
+  }
+
+    return <div>
+      <StyleRoot>
+        <h1> Hi, I'am a great developer</h1>
+        <p className={classes.join('')}>This is really working</p>
+       <button 
+       style={style}
+       onClick = {this.togglePersonHandler}>Togle Person</button>
+      </StyleRoot>
+    </div>;
   }
 }
 
-export default App;
+export default Radium(App);
