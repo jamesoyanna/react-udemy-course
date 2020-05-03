@@ -1,3 +1,13 @@
+.app{
+  background-color: aqua;
+  color: #e64d00;
+}
+
+p{
+  color: #913405;
+  font-size: 30px;
+}
+
 .red{
   color: red;
 }
@@ -7,7 +17,7 @@
 }
 
 button{
- background-color: #ff0080;
+ background-color: saddlebrown;
       color: white;
       font: inherit;
       border: 1px solid blue;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import  classes from "./App.css";
 import Person from "./Person/Person";
 
 class App extends Component {
@@ -44,6 +44,7 @@ class App extends Component {
     this.setState({ showPersons: !doesShow });
   };
 
+
   render() {
     let persons = null;
 
@@ -66,12 +67,13 @@ class App extends Component {
 
     }
    
+    
+  const btnClass = classes.button;
     return (
-      <div className="App">
+      <div className={classes.app}>
         <h1>Hi, I'm a React App</h1>
-        <p>This is really working!</p>
-        <button alt={this.state.showPersons}
-          onClick={this.togglePersonsHandler}>
+        <p className={classes.p}>This is really working!</p>
+        <button className={btnClass} onClick={this.togglePersonsHandler}>
           Toggle Persons
         </button>
         {persons}
