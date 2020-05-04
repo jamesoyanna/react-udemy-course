@@ -2,7 +2,7 @@ import React from 'react';
 import './Person.css'
 
 const Person = (props)=>{
-  
+  console.log('[App js] person')
     return (
       <div className='Person'>
         <p onClick={props.click}>
