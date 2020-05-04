@@ -1,0 +1,32 @@
+.Cockpit {
+  background-color: aqua;
+  color: #e64d00;
+}
+
+p{
+  color: #913405;
+  font-size: 30px;
+}
+
+.red{
+  color: red;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.Cockpit button{
+ background-color: saddlebrown;
+      color: white;
+      font: inherit;
+      border: 1px solid blue;
+      padding: 8px;
+      cursor: pointer;
+    
+}
+
+.Cockpit button:hover{
+  background-color: #e64d00;
+        color: black;
+}
