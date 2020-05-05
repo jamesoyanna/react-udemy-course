@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import './Person.css'
 import Aux from '../Hoc/Auxi';
 class Person extends Component{
   render(){
     console.log("[App js] person");
     return (
-      <Aux>
+      <Fragment>
         <p onClick={this.props.click}>
           I am {this.props.name} and I am {this.props.age} years old
         </p>
@@ -13,9 +13,9 @@ class Person extends Component{
         <input
           type="text"
           onChange={this.props.changed}
-          value={this.props.name}
+          value={this.props.value}
         />
-      </Aux>
+      </Fragment>
     );  
 
   }
