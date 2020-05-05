@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Person.css'
-import Aux from '../Auxi/Auxi';
+import Aux from '../Hoc/Auxi';
 class Person extends Component{
   render(){
     console.log("[App js] person");
