@@ -8,7 +8,7 @@ const Cockpit = (props)=>{
     console.log('cockpit.js useeffect')
 
     const timer =  setTimeout(()=>{
-      alert('Save data to cloud')
+      
     },1000);
     return ()=>{
       clearTimeout(timer)
