@@ -5,6 +5,7 @@ import Cockpit from '../components/CockPit/CockPit';
 import withClass from '../components/Hoc/withClass';
 import Auxi from '../components/Hoc/Auxi';
 
+
 class App extends Component {
 
   constructor(props){
