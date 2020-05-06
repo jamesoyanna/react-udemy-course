@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import  classes from "./App.css";
 import Persons from "../components/Persons/Persons";
 import Cockpit from '../components/CockPit/CockPit';
-
-
+import WithClass from '../components/Hoc/WithClass';
 class App extends Component {
 
   constructor(props){
@@ -18,7 +17,8 @@ class App extends Component {
     ],
     otherState: "some other value",
     showPersons: false,
-    showCockpit: true
+    showCockpit: true,
+    man: 'James'
   };
 
   static getDerivedStateFromProps(props, state){
@@ -79,18 +79,24 @@ class App extends Component {
     }
 
     return (
-      <div className={classes.App}>
-        <button onClick={()=>{this.setState({showCockpit:false})}}>Remove Cockpit</button>
-        {this.state.showCockpit?<Cockpit 
-        title = {this.props.appTitle}
-        showPersons = {this.state.showPersons}
-        persons = {this.state.persons}
-        clicked = {this.togglePersonsHandler}
-        /> :null}
+      <WithClass classes={classes.App}>
+        <button
+          onClick={() => {
+            this.setState({ showCockpit: false });
+          }}
+        >
+          Remove Cockpit
+        </button>
+        {this.state.showCockpit ? (
+          <Cockpit
+            title={this.props.appTitle}
+            showPersons={this.state.showPersons}
+            persons={this.state.persons}
+            clicked={this.togglePersonsHandler}
+          />
+        ) : null}
         {persons}
-
-    
-      </div>
+      </WithClass>
     );
     
   }
